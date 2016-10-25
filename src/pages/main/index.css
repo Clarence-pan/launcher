@@ -1,0 +1,50 @@
+html, body{
+    overflow: hidden;
+}
+html{
+    margin: 0;
+    padding: 10px 5px;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+#programs{
+    width: 100%;
+}
+#programs th, #programs td{
+    margin: 2px 3px;
+}
+
+#programs .name{
+    width: 10em;
+    text-align: left;
+}
+#programs .status{
+    width: 6em;
+    text-align: center;
+}
+
+#programs .pid{
+    width: 3em;
+    text-align: right;
+}
+
+#programs .ops{
+    text-align: center;
+}
+
+
+#logs {
+    display: block;
+    list-style: decimal;
+    overflow: scroll;
+    width: 100%;
+    height: 100%;
+    background: #f0f0f0;
+    border: 1px solid #eee;
+}
+
+#logs li{
+    white-space: pre;
+}

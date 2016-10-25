@@ -1,0 +1,13 @@
+{
+  "name": "redis",
+  "desc": "Redis Server",
+  "enabled": true,
+  "shell": false,
+  "exec": "path/to/redis-server.exe",
+  "cwd": "path/to/redis",
+  "autoStart": true,
+  "autoRestart": true,
+  "stdout": "path/to/redis.log",
+  "stderr": "stdout"
+}
+

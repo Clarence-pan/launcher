@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Launcher</title>
+    <link type="text/css" rel="stylesheet" href="./index.css" >
+    <script src="../../lib/jquery.min.js"></script>
+    <script src="./index.js"></script>
+</head>
+<body>
+    <table id="programs">
+        <tr>
+            <th class="name">Name</th>
+            <th class="status">Status</th>
+            <th class="pid">PID</th>
+            <th class="ops">Operations</th>
+        </tr>
+    </table>
+    <ol id="logs"></ol>
+    <script id="programTpl" type="text/template">
+        <tr class="program">
+            <td class="name"></td>
+            <td class="status"></td>
+            <td class="pid"></td>
+            <td class="ops">
+                <button type="button" class="btn btn-restart">Restart</button>
+                <button type="button" class="btn btn-stop">Stop</button>
+                <button type="button" class="btn btn-start">Start</button>
+            </td>
+        </tr>
+    </script>
+</body>
+</html>
