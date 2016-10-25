@@ -5,8 +5,11 @@ try{
     var App = require('../../app');
     log("Loaded App.");
 } catch (e){
-    alert("Error: got an exception when initializing: " + e);
+    window.alert("Error: got an exception when initializing: " + e);
 }
+
+const $ = getDomUtils();
+
 
 $(function(){
     try {
@@ -107,3 +110,29 @@ $(function(){
         $program.find('.pid').text(program.pid);
     }
 });
+
+
+function getDomUtils()
+{
+    if (typeof window.$ !== 'undefined'){
+        return window.$;
+    }
+
+    var $ = function(x){
+        if (typeof x === 'function'){
+            window.document.addEventListener('ready', x);
+            return;
+        } else if (typeof x === 'string'){
+            if (x[0] === '#' || x[0] === '.'){
+                return $(window.document.querySelectorAll(x));
+            } else {
+                // todo...
+            }
+        } else {
+            // todo..
+        }
+    };
+
+
+    return $;
+}

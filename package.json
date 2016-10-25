@@ -14,9 +14,9 @@
     "dotenv": "^2.0.0",
     "glob": "^7.1.1",
     "is-running": "^2.1.0",
-    "nw": "^0.18.2",
     "tree-kill": "^1.1.0",
-    "util": "^0.10.3"
+    "util": "^0.10.3",
+    "electron": "^1.4.1"
   },
   "window": {
     "toolbar": true
