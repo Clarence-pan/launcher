@@ -315,6 +315,13 @@ function extend(receiver) {
     return receiver;
 }
 
+function stopAllPrograms()
+{
+    return Promise.all(Object.keys(programs).map(function(programId){
+        return stopProgram(programId);
+    }));
+}
+
 
 module.exports = {
     start: startApp,
@@ -323,6 +330,7 @@ module.exports = {
     startProgram: startProgram,
     stopProgram: stopProgram,
     restartProgram: restartProgram,
+    stopAllPrograms: stopAllPrograms,
     STATUS_INITIAL: STATUS_INITIAL,
     STATUS_STARTING: STATUS_STARTING,
     STATUS_RUNNING: STATUS_RUNNING,
